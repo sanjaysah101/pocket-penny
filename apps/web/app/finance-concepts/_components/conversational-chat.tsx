@@ -13,49 +13,49 @@ interface ConversationalChatProps {
   conceptId: string;
 }
 
+const conceptFAQs: Record<string, Array<{ question: string; answer: string }>> = {
+  "compound-interest": [
+    {
+      question: "What exactly is compound interest?",
+      answer:
+        "Compound interest is when you earn interest not just on your original investment, but also on the interest you've already earned. It's like a snowball effect - your money grows faster over time because the growth itself starts growing!",
+    },
+    {
+      question: "How is compound interest different from simple interest?",
+      answer:
+        "Simple interest only pays you on your original amount. For example, $1000 at 5% simple interest earns $50 every year. But with compound interest, in year 2 you'd earn interest on $1050, then $1102.50, and so on. The difference becomes huge over time!",
+    },
+    {
+      question: "When does compound interest really start to show its power?",
+      answer:
+        "The magic really happens after 10+ years. In the first few years, the difference between simple and compound interest is small. But give it time - after 20-30 years, compound interest can double or triple your returns compared to simple interest.",
+    },
+  ],
+  "dollar-cost-averaging": [
+    {
+      question: "What is dollar-cost averaging?",
+      answer:
+        "Dollar-cost averaging means investing the same amount of money regularly, regardless of market conditions. For example, investing $500 every month whether the market is up or down.",
+    },
+    {
+      question: "Why not just invest when the market is low?",
+      answer:
+        "Because nobody can predict when the market will be at its lowest! Even professional investors struggle with timing. Dollar-cost averaging removes the guesswork and helps you buy more shares when prices are low and fewer when prices are high.",
+    },
+    {
+      question: "Does this strategy work in bear markets?",
+      answer:
+        "Actually, dollar-cost averaging can work especially well in bear markets! When prices are falling, your regular investments buy more shares. When the market recovers, you'll have accumulated shares at various price points, many of them at discounted prices.",
+    },
+  ],
+  // Add more concept FAQs...
+};
+
 export const ConversationalChat: React.FC<ConversationalChatProps> = ({ conceptId }) => {
   const [message, setMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const { state: uiState, dispatch } = useUIState();
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-
-  const conceptFAQs: Record<string, Array<{ question: string; answer: string }>> = {
-    "compound-interest": [
-      {
-        question: "What exactly is compound interest?",
-        answer:
-          "Compound interest is when you earn interest not just on your original investment, but also on the interest you've already earned. It's like a snowball effect - your money grows faster over time because the growth itself starts growing!",
-      },
-      {
-        question: "How is compound interest different from simple interest?",
-        answer:
-          "Simple interest only pays you on your original amount. For example, $1000 at 5% simple interest earns $50 every year. But with compound interest, in year 2 you'd earn interest on $1050, then $1102.50, and so on. The difference becomes huge over time!",
-      },
-      {
-        question: "When does compound interest really start to show its power?",
-        answer:
-          "The magic really happens after 10+ years. In the first few years, the difference between simple and compound interest is small. But give it time - after 20-30 years, compound interest can double or triple your returns compared to simple interest.",
-      },
-    ],
-    "dollar-cost-averaging": [
-      {
-        question: "What is dollar-cost averaging?",
-        answer:
-          "Dollar-cost averaging means investing the same amount of money regularly, regardless of market conditions. For example, investing $500 every month whether the market is up or down.",
-      },
-      {
-        question: "Why not just invest when the market is low?",
-        answer:
-          "Because nobody can predict when the market will be at its lowest! Even professional investors struggle with timing. Dollar-cost averaging removes the guesswork and helps you buy more shares when prices are low and fewer when prices are high.",
-      },
-      {
-        question: "Does this strategy work in bear markets?",
-        answer:
-          "Actually, dollar-cost averaging can work especially well in bear markets! When prices are falling, your regular investments buy more shares. When the market recovers, you'll have accumulated shares at various price points, many of them at discounted prices.",
-      },
-    ],
-    // Add more concept FAQs...
-  };
 
   useEffect(() => {
     if (scrollAreaRef.current) {
