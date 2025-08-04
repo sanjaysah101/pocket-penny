@@ -1,126 +1,258 @@
-# Pocket Penny
+# Pocket Penny 💰
 
-A comprehensive pocket penny built with Turborepo, Next.js, and shadcn/ui. This template provides a solid foundation for building full-stack applications with a shared UI library, ESLint and TypeScript configurations.
+**Your AI-powered financial education companion that makes investing simple and accessible for everyone.**
+
+Pocket Penny is a comprehensive financial education platform built with modern web technologies, designed to demystify investing and help users make informed financial decisions through interactive tools, educational content, and personalized insights.
+
+## 🚀 Live Demo
+
+[Visit Pocket Penny](https://pocket-penny-web.vercel.app/)
 
 ## ✨ Features
 
-- **Turborepo**: High-performance build system for JavaScript and TypeScript codebases.
-- **Next.js**: The React framework for production.
-- **shadcn/ui**: Beautifully designed components that you can copy and paste into your apps.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **TypeScript**: Static type checking for JavaScript.
-- **ESLint & Prettier**: For consistent code style and quality.
-- **Shared Configurations**: Centralized ESLint and TypeScript configurations for all packages.
+### 🎯 Core Experience
 
-## Core Challenge
+- **Interactive Financial Calculators**: Compound interest, emergency fund, ETF comparisons
+- **Round-Up Savings Simulator**: Visualize how spare change can grow into real investments
+- **Finance Concepts Demystifier**: Learn investing basics through conversational AI
+- **Personalized Dashboard**: Track your financial journey with custom insights
 
-- Simplifies complex financial concepts for beginners
-- Helps users visualize the impact of small, consistent investments
-- Creates engaging interactions that make finance less intimidating
-- Provides personalized insights based on user data or preferences
+### 📊 Educational Tools
 
-## Tracks
+- **Market History Explorer**: Interactive historical market performance visualization
+- **Risk Assessment Tools**: Understand investment risk through interactive demos
+- **Fee Impact Calculator**: See how fees affect long-term returns
+- **Budget-to-Invest Converter**: Find money for investing in your current spending
 
-### Round-Up saving simulator
+### 🤖 AI-Powered Features
 
-> Build a tool that shows how small "round-ups" from everyday purchases can grow over time.
+- **Conversational Finance Assistant**: Ask questions in plain English
+- **Personalized Learning Paths**: Tailored content based on your knowledge level
+- **Smart Recommendations**: Context-aware financial guidance
 
-**Core Features:** Process transaction data (CSV upload), calculate spare change, visualize potential growth
+## 🛠️ Tech Stack
 
-**Tech Focus:** Data processing, basic financial modeling, interactive visualization
+### Frontend
 
-**For Beginners:** Start with a simple UI that calculates round-ups from manual entries
+- **Next.js 15** - React framework for production
+- **TypeScript** - Type safety and better developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible components
+- **Framer Motion** - Smooth animations and transitions
 
-### Finance Concepts Demystifier
+### Backend & Infrastructure
 
-> Create an interactive experience that explains investing basics in plain language.
+- **Turborepo** - High-performance build system
+- **pnpm** - Fast, disk space efficient package manager
+- **ESLint & Prettier** - Code quality and formatting
+- **Husky** - Git hooks for quality control
 
-**Core Features:** Cover 5−10 essential concepts like ETFs, compound interest, or dollar-cost averaging
+### Development Tools
 
-**Tech Focus:** Knowledge representation, conversational UI, gamification elements
+- **Monorepo Architecture** - Shared packages and configurations
+- **Hot Module Replacement** - Instant development feedback
+- **Type-safe API Routes** - End-to-end type safety
 
-**For Beginners:** Use AI to generate explanations or build a simple quiz format
-Create an interactive experience that explains investing basics in plain language.
+## 🏗️ Project Structure
 
-### Budget-to-Invest Dashboard
+```
+pocket-penny/
+├── apps/
+│   └── web/                    # Next.js application
+│       ├── app/                # App Router (Next.js 15)
+│       │   ├── finance-concepts/    # Educational content
+│       │   ├── round-up-simulator/  # Savings calculator
+│       │   └── api/                 # API routes
+│       ├── components/         # React components
+│       ├── lib/               # Utilities and helpers
+│       └── hooks/             # Custom React hooks
+├── packages/
+│   ├── ui/                    # Shared UI components
+│   ├── types/                 # TypeScript definitions
+│   ├── eslint-config/         # ESLint configurations
+│   └── typescript-config/     # TypeScript configurations
+└── turbo.json                 # Turborepo configuration
+```
 
-> Build a visualization tool that helps users find money for investing within their current spending.
+## 🚀 Getting Started
 
-**Core Features:** Expense categorization, interactive charts, "what-if" scenarios for investing
+### Prerequisites
 
-**Tech Focus:** Data visualization, categorization algorithms, financial projections
+- Node.js 20+
+- pnpm (recommended) or npm
 
-**For Beginners:** Start with manual data entry and focus on the visualization aspects
+### Installation
 
-### AI Finance Assistant
+1. **Clone the repository**
 
-> Create a conversational interface that answers basic money questions and provides personalized guidance.
+```bash
+git clone https://github.com/yourusername/pocket-penny.git
+cd pocket-penny
+```
 
-**Core Features:** Handle questions about investing basics, provide contextual explanations
+2. **Install dependencies**
 
-**Tech Focus:** Natural language processing, LLM integration, conversational design
+```bash
+pnpm install
+```
 
-**For Beginners:** Start with a few predefined questions and expand from there.
+3. **Start development server**
 
-### Market History Explorer
+```bash
+pnpm dev
+```
 
-> Build an interactive tool that demonstrates historical market performance and investment outcomes.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-**Core Features:** Visualize index data, simulate past investment scenarios, highlight key concepts
+### Available Scripts
 
-**Tech Focus:** Data fetching/processing, interactive charting, time-series analysis
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm lint` - Run ESLint
+- `pnpm typecheck` - Run TypeScript checks
+- `pnpm format` - Format code with Prettier
 
-**For Beginners:** Use pre-packaged data and focus on the visualization experience
+## 🎯 Key Features Deep Dive
 
-### Investment Risk Visualizer
+### 📈 Round-Up Savings Simulator
 
-> Create a tool that helps users understand the concept of investment risk through interactive visuals.
+Upload your transaction data (CSV) and see how rounding up purchases could grow your savings over time.
 
-**Core Features:** Risk/return visualization, volatility explainers, personalized risk assessment
+**Features:**
 
-**Tech Focus:** Risk modeling, interactive data visualization, educational components
+- CSV file upload and processing
+- Automatic round-up calculations
+- Growth visualization with charts
+- Customizable investment scenarios
 
-**For Beginners:** Focus on explaining 1−2 risk concepts with clear visuals
-Create a tool that helps users understand the concept of investment risk through interactive visuals.Investment Risk Visualizer
+### 🎓 Finance Concepts Explorer
 
-### Values-Based Investing Guide
+Interactive lessons covering essential investing concepts:
 
-> Build a tool that helps users align investments with personal values like sustainability or social impact
+**Topics Covered:**
 
-**Core Features:** Process transaction data (CSV upload), calculate spare change, visualize potential growth
+- Compound Interest & Time Value of Money
+- Diversification & Risk Management
+- ETF vs Individual Stocks
+- Dollar-Cost Averaging
+- Emergency Fund Planning
+- Market Volatility & Long-term Investing
 
-**Tech Focus:** Data processing, basic financial modeling, interactive visualization
+### 💡 AI Finance Assistant
 
-**For Beginners:** Start with a simple UI that calculates round-ups from manual entries
-Build a tool that helps users align investments with personal values like sustainability or social impact.
+Conversational AI that answers your finance questions in plain English.
 
-### Fee Impact Calculator
+**Capabilities:**
 
-> Create a visualization that shows how fees and taxes affect investment returns over time.
+- Explain complex financial concepts
+- Provide personalized investment guidance
+- Answer specific questions about your financial situation
+- Suggest next steps based on your goals
 
-**Core Features:** Fee comparison, long-term impact visualization, optimization suggestions
+## 🔧 Development
 
-**Tech Focus:** Financial modeling, comparative visualization, optimization algorithms
+### Environment Variables
 
-**For Beginners:** Focus on comparing just 2−3 fee structures with clear visual impact
-Create a visualization that shows how fees and taxes affect investment returns over time.
+Create a `.env.local` file in the root directory:
 
-### Collaborative Investment Simulator
+```env
+# Database
+DATABASE_URL="your-database-url"
 
-> Build a multiplayer environment where friends can learn about investing together.
+# AI Services
+OPENAI_API_KEY="your-openai-api-key"
 
-**Core Features:** Shared portfolio building, performance tracking, discussion tools
+# Analytics
+NEXT_PUBLIC_ANALYTICS_ID="your-analytics-id"
+```
 
-**Tech Focus:** Real-time collaboration, multi-user state management, data visualization
+### Adding New Features
 
-**For Beginners:** Start with asynchronous collaboration and basic sharing features
+1. **New Calculator/Tool**
+   - Create component in `apps/web/app/[feature-name]/`
+   - Add route in Next.js app router
+   - Include in navigation
 
-### Financial Health API
+2. **New Educational Content**
+   - Add to `apps/web/app/finance-concepts/`
+   - Update concept cards and dialogs
+   - Add to progress tracking
 
-> Create an API that provides users with their financial health data and insights.Create a backend service that evaluates financial health and provides actionable recommendations.
+3. **API Endpoints**
+   - Create in `apps/web/app/api/[endpoint]/route.ts`
+   - Follow RESTful conventions
+   - Add TypeScript types
 
-**Core Features:** User data aggregation, health metrics calculation, personalization
+## 🧪 Testing
 
-**Tech Focus:** Data processing, financial modeling, API design
+```bash
+# Run all tests
+pnpm test
 
-**For Beginners:** Focus on creating a basic API that returns user data and health metrics
+# Run tests in watch mode
+pnpm test:watch
+
+# Run e2e tests
+pnpm test:e2e
+```
+
+## 📦 Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel --prod
+```
+
+### Docker
+
+```bash
+# Build image
+docker build -t pocket-penny .
+
+# Run container
+docker run -p 3000:3000 pocket-penny
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Quick Start for Contributors
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes
+4. Run tests: `pnpm test`
+5. Commit: `git commit -m 'Add amazing feature'`
+6. Push: `git push origin feature/amazing-feature`
+7. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **shadcn/ui** for the beautiful component library
+- **Next.js team** for the amazing framework
+- **Turborepo** for the monorepo tooling
+- **Financial education advocates** for inspiring this project
+
+## 📞 Support
+
+- **Documentation**: [docs.pocketpenny.dev](https://docs.pocketpenny.dev)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/pocket-penny/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/pocket-penny/discussions)
+- **Email**: <support@pocketpenny.dev>
+
+---
+
+**Made with ❤️ by the Pocket Penny Team**
+
+_Empowering everyone to make informed financial decisions, one penny at a time._
