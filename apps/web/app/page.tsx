@@ -1,50 +1,25 @@
-import { ComponentProps } from "react";
+import { Features } from "../components/Features";
+import { Footer } from "../components/Footer";
+import { GettingStarted } from "../components/GettingStarted";
+import { Hero } from "../components/Hero";
+import { Navigation } from "../components/Navbar";
+import { Newsletter } from "../components/Newsletter";
+import { Testimonials } from "../components/Testimonials";
+import { TracksShowcase } from "../components/TrackShowCase";
 
-import type { User } from "@pocketpenny/types/user";
-import { Button } from "@pocketpenny/ui/components";
-import { ThemeToggle } from "@pocketpenny/ui/theme";
-
-import { APP_CONFIG } from "../lib/constants";
-import { env } from "../lib/env";
-
-export default function Page(): ComponentProps<"div"> {
-  const user: User = {
-    id: "123",
-    email: "john@school.com",
-    name: "John",
-    role: "student",
-  };
-
+const App = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <ThemeToggle />
-
-        <p>User is only available in the server component in next.js</p>
-        <p className="text-sm text-gray-500">{user.name}</p>
-        <h1 className="text-2xl font-bold">{APP_CONFIG.DASHBOARD_TITLE}</h1>
-        <p className="text-sm text-gray-500">{APP_CONFIG.SITE_NAME}</p>
-        <p>Env is only available in the server component in next.js</p>
-        <p className="text-sm text-gray-500">{env.NODE_ENV}</p>
-        <Button size="sm" variant="default">
-          Button
-        </Button>
-        <Button size="sm" variant="destructive">
-          Button
-        </Button>
-        <Button size="sm" variant="ghost">
-          Button
-        </Button>
-        <Button size="sm" variant="link">
-          Button
-        </Button>
-        <Button size="sm" variant="outline">
-          Button
-        </Button>
-        <Button size="sm" variant="secondary">
-          Button
-        </Button>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Features />
+      <TracksShowcase />
+      <GettingStarted />
+      <Testimonials />
+      <Newsletter />
+      <Footer />
     </div>
   );
-}
+};
+
+export default App;

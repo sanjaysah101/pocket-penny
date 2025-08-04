@@ -12,86 +12,115 @@ A comprehensive pocket penny built with Turborepo, Next.js, and shadcn/ui. This 
 - **ESLint & Prettier**: For consistent code style and quality.
 - **Shared Configurations**: Centralized ESLint and TypeScript configurations for all packages.
 
-## 🚀 Getting Started
+## Core Challenge
 
-1. **Clone the repository:**
+- Simplifies complex financial concepts for beginners
+- Helps users visualize the impact of small, consistent investments
+- Creates engaging interactions that make finance less intimidating
+- Provides personalized insights based on user data or preferences
 
-   ```bash
-   git clone https://github.com/your-username/monorepo-starter-kit.git
-   cd monorepo-starter-kit
-   ```
+## Tracks
 
-2. **Install dependencies:**
+### Round-Up saving simulator
 
-   This project uses `pnpm` as the package manager.
+> Build a tool that shows how small "round-ups" from everyday purchases can grow over time.
 
-   ```bash
-   pnpm install
-   ```
+**Core Features:** Process transaction data (CSV upload), calculate spare change, visualize potential growth
 
-3. **Run the development server:**
+**Tech Focus:** Data processing, basic financial modeling, interactive visualization
 
-   This will start the development server for the `docs` application.
+**For Beginners:** Start with a simple UI that calculates round-ups from manual entries
 
-   ```bash
-   pnpm dev
-   ```
+### Finance Concepts Demystifier
 
-   Open <http://localhost:3000> with your browser to see the result.
+> Create an interactive experience that explains investing basics in plain language.
 
-## 📂 Monorepo Structure
+**Core Features:** Cover 5−10 essential concepts like ETFs, compound interest, or dollar-cost averaging
 
-This monorepo is structured as follows:
+**Tech Focus:** Knowledge representation, conversational UI, gamification elements
 
-- `apps/docs`: A Next.js application, which can serve as your main web application or documentation site.
-- `packages/ui`: A shared UI component library using `shadcn/ui`. Components added here are available to all apps in the monorepo.
-- `packages/eslint-config`: Shared ESLint configuration for the entire monorepo.
-- `packages/typescript-config`: Shared `tsconfig.json` files.
+**For Beginners:** Use AI to generate explanations or build a simple quiz format
+Create an interactive experience that explains investing basics in plain language.
 
-## 🛠️ Usage
+### Budget-to-Invest Dashboard
 
-### Using UI Components
+> Build a visualization tool that helps users find money for investing within their current spending.
 
-To use a component from the `@pocketpenny/ui` package in your application (e.g., `apps/docs`), you can import it directly:
+**Core Features:** Expense categorization, interactive charts, "what-if" scenarios for investing
 
-```tsx
-import { Button } from "@pocketpenny/ui/components/button";
+**Tech Focus:** Data visualization, categorization algorithms, financial projections
 
-export default function Page() {
-  return <Button>Click me</Button>;
-}
-```
+**For Beginners:** Start with manual data entry and focus on the visualization aspects
 
-### Adding New shadcn/ui Components
+### AI Finance Assistant
 
-To add new `shadcn/ui` components to the shared `ui` package, run the following command from the root of the monorepo:
+> Create a conversational interface that answers basic money questions and provides personalized guidance.
 
-```bash
-pnpm dlx shadcn-ui@latest add [component-name]
-```
+**Core Features:** Handle questions about investing basics, provide contextual explanations
 
-## Adding components
+**Tech Focus:** Natural language processing, LLM integration, conversational design
 
-To add components to your app, run the following command at the root of your `web` app:
+**For Beginners:** Start with a few predefined questions and expand from there.
 
-```bash
-pnpm dlx shadcn@latest add button -c apps/web
-```
+### Market History Explorer
 
-This will place the ui components in the `packages/ui/src/components` directory.
+> Build an interactive tool that demonstrates historical market performance and investment outcomes.
 
-## Tailwind
+**Core Features:** Visualize index data, simulate past investment scenarios, highlight key concepts
 
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+**Tech Focus:** Data fetching/processing, interactive charting, time-series analysis
 
-## Using components
+**For Beginners:** Use pre-packaged data and focus on the visualization experience
 
-To use the components in your app, import them from the `ui` package.
+### Investment Risk Visualizer
 
-```tsx
-import { Button } from "@pocketpenny/ui/components/button";
-```
+> Create a tool that helps users understand the concept of investment risk through interactive visuals.
 
-## Update package name to your custom domain
+**Core Features:** Risk/return visualization, volatility explainers, personalized risk assessment
 
-Replace `@pocketpenny/` with your app name to `@<YOUR_APP_NAME>/`.
+**Tech Focus:** Risk modeling, interactive data visualization, educational components
+
+**For Beginners:** Focus on explaining 1−2 risk concepts with clear visuals
+Create a tool that helps users understand the concept of investment risk through interactive visuals.Investment Risk Visualizer
+
+### Values-Based Investing Guide
+
+> Build a tool that helps users align investments with personal values like sustainability or social impact
+
+**Core Features:** Process transaction data (CSV upload), calculate spare change, visualize potential growth
+
+**Tech Focus:** Data processing, basic financial modeling, interactive visualization
+
+**For Beginners:** Start with a simple UI that calculates round-ups from manual entries
+Build a tool that helps users align investments with personal values like sustainability or social impact.
+
+### Fee Impact Calculator
+
+> Create a visualization that shows how fees and taxes affect investment returns over time.
+
+**Core Features:** Fee comparison, long-term impact visualization, optimization suggestions
+
+**Tech Focus:** Financial modeling, comparative visualization, optimization algorithms
+
+**For Beginners:** Focus on comparing just 2−3 fee structures with clear visual impact
+Create a visualization that shows how fees and taxes affect investment returns over time.
+
+### Collaborative Investment Simulator
+
+> Build a multiplayer environment where friends can learn about investing together.
+
+**Core Features:** Shared portfolio building, performance tracking, discussion tools
+
+**Tech Focus:** Real-time collaboration, multi-user state management, data visualization
+
+**For Beginners:** Start with asynchronous collaboration and basic sharing features
+
+### Financial Health API
+
+> Create an API that provides users with their financial health data and insights.Create a backend service that evaluates financial health and provides actionable recommendations.
+
+**Core Features:** User data aggregation, health metrics calculation, personalization
+
+**Tech Focus:** Data processing, financial modeling, API design
+
+**For Beginners:** Focus on creating a basic API that returns user data and health metrics
